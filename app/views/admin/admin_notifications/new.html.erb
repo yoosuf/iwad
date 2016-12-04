@@ -1,0 +1,88 @@
+<%= form_for @admin_notification, url: admin_admin_notifications_path, :html => {:class => 'form'}  do |f| %>
+    <%= render partial: "/shared/validation_errors", locals: { resource: @admin_notification } %>
+
+    <!-- Main content -->
+<section class="content">
+    <div class="row">
+        <section class="col-lg-12 connectedSortable">
+            <!-- User Stats-->
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs pull-right">
+                    <li class="pull-left header"><i class="fa fa-edit"></i> Add Admin Notification</li>
+                </ul>
+                <br />
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="offrname">Name</label>
+                            <div class=" col-lg-7 col-xs-12">
+                                <%= f.text_field :name, autofocus: true, class:'form-control', :required => '', placeholder:'Enter name' %>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+
+                </div><!-- /.row -->
+                <br />
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="offrfrom">Email</label>
+                            <div class="col-lg-7 col-xs-12">
+                                <%= f.text_field :email, autofocus: true, class:'form-control', :required => '', placeholder:'Enter email'  %>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+                </div><!-- /.row -->
+                <br />
+
+                <!-- <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="desc">Timezone</label>
+                            <div class="col-lg-7 col-xs-12">
+                                <%= time_zone_select( "admin_notification", "time_zone", nil, include_blank: true) %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br /> -->
+
+
+                        <!-- <div class="row">
+                            <div class="col-lg-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-lg-3 col-xs-12" for="offrstat">Status</label>
+                                    <div class=" col-lg-7 col-xs-12">
+                                        Disable <%= f.check_box :status,  {}, false, true %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+
+<!--                 <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="offrstat">Status</label>
+                            <div class=" col-lg-7 col-xs-12">
+                                <%= f.check_box :status %>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <br />
+            </div>
+        </section>
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="col-lg-1">
+            <button id="offrok" type="submit" class="btn btn-primary btn-block">Ok</button>
+        </div>
+    </div>
+    <br />
+</section>
+ <% end %>

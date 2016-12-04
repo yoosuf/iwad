@@ -1,0 +1,48 @@
+<!-- Main content -->
+<section class="content">
+    <br />
+    <div>
+        <!-- Tab panes -->
+        <div class="tab-content content-bg">
+            <div role="tabpanel" class="tab-pane active" id="verified">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="col-xs-1">Delivery ID</th>
+                        <th class="col-xs-1">Placed On</th>
+                        <th class="col-xs-2">Driver Id</th>
+                        <th class="col-xs-2">Driver Name</th>
+                        <th class="col-xs-1">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
+                       i = 0
+                       styleClass = 'success'
+                       @allocations.each do |delivery|
+                         i =i+1
+
+                         if i%2 == 0
+                           styleClass = 'info'
+                         end
+                    %>
+                        <tr class="info">
+                            <td class="col-xs-1"><%= delivery.deliveries.id %></td>
+                            <td class="col-xs-1"><%= delivery.created_at.strftime("%d-%m-%Y %H:%M")%></td>
+                            <td class="col-xs-2"><%= delivery.drivers.nil? ? '' : delivery.drivers.id %></td>
+                            <td class="col-xs-2"><%= delivery.drivers.nil? ? '' : delivery.drivers.name %></td>
+                            <td class="col-xs-1"><%= delivery.status %> </td>
+                        </tr>
+                    <% end %>
+                    </tbody>
+                </table>
+                <div class="pagination-wrapper">
+                    <%= will_paginate @allocations %>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="pending">
+
+            </div>
+        </div>
+    </div>
+</section>

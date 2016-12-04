@@ -1,0 +1,10 @@
+<h1>iWAD Delivery on the loop!</h1>
+
+<p>You are receiving this email from iWAD to notify you that the delivery ID {{delivery.id}}  has not been accepted within the 10 minute window.</p>
+<ul>
+  <li>Delivery ID  <%= @delivery.id %></li>
+  <li>B2B Organisation  <%= @delivery.user.organisation_name %></li>
+  <li>Order Placed by  <%= @delivery.user.name %></li>
+</ul>
+<p>This is a system generated message</p>
+

@@ -1,0 +1,18 @@
+
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="<%= controller.controller_name == 'drivers' && controller.action_name == 'index' && params[:q].blank? ? 'active': '' %>">
+    <a href="<%= url_for :controller => 'drivers', :action => 'index' %>" aria-controls="verified" role="tab">Verified
+      Drivers</a>
+  </li>
+
+
+  <li role="presentation" class="<%= controller.controller_name == 'drivers' && controller.action_name == 'pending_list' ? 'active': '' %>">
+    <a href="<%= url_for :controller => 'drivers', :action => 'pending_list' %>" aria-controls="pending" role="tab">Pending
+      Drivers</a></li>
+
+
+  <li role="presentation" class="<%= controller.controller_name == 'drivers' && controller.action_name == 'suspend_list' ? 'active': '' %>">
+    <a href="<%= url_for :controller => 'drivers', :action => 'suspend_list' %>" aria-controls="pending" role="tab">Suspended
+      Drivers</a></li>
+</ul>

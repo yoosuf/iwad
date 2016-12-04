@@ -1,0 +1,268 @@
+<%= form_tag admin_reports_path, method: 'get', class: "form" do %>
+
+
+
+    <section class="content">
+        <div class="row">
+            <section class="col-lg-12 connectedSortable">
+                <!-- User Stats-->
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs pull-right">
+                        <li class="pull-left header"><i class="fa fa-user"></i> Delivery Report</li>
+                    </ul>
+                    <br />
+
+
+                    <div class="row">
+                        <div class="col-lg-6 col-xs-12">
+                            <div class="form-group">
+                                <label class="col-lg-3 col-xs-12">Organisation</label>
+
+                                <div class="col-lg-3 col-xs-4">
+
+                                    <%= select_tag :organisation, options_from_collection_for_select(User.group(:organisation_name).all, "organisation_name", "organisation_name", selected:  params[:organisation] ), include_blank: true %>
+
+
+                                </div>
+                            </div>
+                        </div><!-- ./col -->
+                    </div><!-- /.row -->
+                    <br />
+
+
+
+                    <div class="row">
+                        <div class="col-lg-6 col-xs-12">
+                            <div class="form-group">
+                                <label class="col-lg-3 col-xs-12">Report type</label>
+
+                                <div class="col-lg-6">
+
+                                  <ul style="padding-left: 0px; margin-left: 0px; list-style-type: none; ">
+
+                                  <% [ 'daily', 'monthly'].each_with_index do |value, index| %>
+                                  <li>
+                                      <%= radio_button_tag :type, value, ( params[:type] ? (params[:type]==value) : (index==0) ) %>
+                                      <%= label_tag value %>
+                                  </li>
+                                  <% end %>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- ./col -->
+                    </div><!-- /.row -->
+                    <br />
+
+
+
+                    <div id="hidden-date-range" class="row">
+                        <div class="col-lg-6 col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label col-lg-3 col-xs-12" for="reportfrom">Date</label>
+                                <div class="col-lg-8 col-xs-12">
+                                    <div id="day">
+                                        <div class="input-group">
+                                            <%= text_field_tag :date, nil, class: 'form-control', placeholder: 'Select a date', value: params[:date] %>
+                                        </div>
+                                    </div>
+                                    <div id="month">
+                                        <div class="input-group input-daterange">
+                                            <%= text_field_tag :start_date, nil, class: 'form-control', placeholder: 'Select start date', value: params[:start_date] %>
+                                            <span class="input-group-addon">to</span>
+                                            <%= text_field_tag :end_date, nil, class: 'form-control', placeholder: 'Select end date', value: params[:end_date] %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- ./col -->
+                    </div>
+                    <br>
+                </div>
+            </section>
+        </div><!-- /.row -->
+
+        <div class="row">
+
+            <div id="generate-report" class="col-lg-2">
+                <%= submit_tag "Generate Report", :name => nil, class: "btn btn-success btn-block", id: "generatereport"  %>
+            </div>
+        </div>
+        <br />
+
+
+
+<% if @deliveries.present? %>
+
+
+
+<h2>Report for <%= params[:organisation]%></h2>
+
+
+<p>
+  Download:
+
+
+<a href="#" id="exportCsv">Export</a>
+
+</p>
+
+
+
+
+        <table id="DeliveriesSpreadsheet" class="table table-bordered">
+          <thead>
+          <tr>
+            <th class="col-xs-1">Order ID</th>
+            <th class="col-xs-1">Organisation Name</th>
+            <th class="col-xs-2">Organisation User</th>
+            <th class="col-xs-1">Collect From</th>
+            <th class="col-xs-1">Deliver to</th>
+            <th class="col-xs-2">Vehicle Type</th>
+            <th class="col-xs-2">POD Date</th>
+            <th class="col-xs-2">Recipient</th>
+            <th class="col-xs-2">Cost</th>
+            <th class="col-xs-2">Status</th>
+          </tr>
+          </thead>
+          <tbody>
+          <%
+            i = 0
+            styleClass = 'success'
+            @deliveries.each do |delivery|
+              i =i+1
+
+              if i%2 == 0
+                styleClass = 'info'
+              end
+          %>
+              <tr class="info">
+                <td class="col-xs-1"><%= delivery.id %></td>
+                <td class="col-xs-1"><%= delivery.company_name %></td>
+                <td class="col-xs-2"><%= delivery.company_user_name %></td>
+                <td class="col-xs-1"><%= delivery.from %></td>
+                <td class="col-xs-1"><%= delivery.to %></td>
+                <td class="col-xs-1"><%= delivery.vehicle_name %></td>
+                <td class="col-xs-1"><%= delivery.pod_datetime %></td>
+                <td class="col-xs-2"><%= delivery.recipient_name %></td>
+                <td class="col-xs-2"><%= number_to_currency(delivery.delivery_cost.nil? ? 0 : delivery.delivery_cost, unit: "£", separator: ".", delimiter: "") %></td>
+                <td class="col-xs-2"><%= delivery.delivery_state %></td>
+
+
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+        <% end %>
+    </section>
+
+
+    <script type="text/javascript">
+        $(function(){
+            $('#day').hide();
+            $('#month').hide();
+
+            var radio_buttons = $("input[type='radio'][name='type']");
+
+            if ($("#type_daily").is(':checked')) {
+                $('#day').show();
+                $('#month').hide();
+            }
+
+            if ($("#type_monthly").is(':checked')) {
+                $('#month').show();
+                $('#day').hide();
+            }
+
+            $(radio_buttons).change(function() {
+
+                var running_out_of_names = $(this).val();
+
+                if (running_out_of_names == "monthly")
+                {
+                    $('#month').show();
+                    $('#day').hide();
+
+                } else if (running_out_of_names == "daily") {
+                    $('#day').show();
+                    $('#month').hide();
+                }
+            });
+
+
+            $('.input-daterange input').each(function() {
+                $(this).datepicker({
+                    format: 'yyyy-mm-dd',
+                    endDate: '0d'
+
+                });
+            });
+
+
+            $('#date').datepicker({
+                format: 'yyyy-mm-dd',
+                endDate: '0d'
+            });
+
+
+
+
+
+        	function exportTableToCSV($table, filename) {
+
+                var $rows = $table.find('tr:has(td),tr:has(th)'),
+
+                    // Temporary delimiter characters unlikely to be typed by keyboard
+                    // This is to avoid accidentally splitting the actual contents
+                    tmpColDelim = String.fromCharCode(11), // vertical tab character
+                    tmpRowDelim = String.fromCharCode(0), // null character
+
+                    // actual delimiter characters for CSV format
+                    colDelim = '","',
+                    rowDelim = '"\r\n"',
+
+                    // Grab text from table into CSV formatted string
+                    csv = '"' + $rows.map(function (i, row) {
+                        var $row = $(row), $cols = $row.find('td,th');
+
+                        return $cols.map(function (j, col) {
+                            var $col = $(col), text = $col.text();
+
+                            return text.replace(/"/g, '""'); // escape double quotes
+
+                        }).get().join(tmpColDelim);
+
+                    }).get().join(tmpRowDelim)
+                        .split(tmpRowDelim).join(rowDelim)
+                        .split(tmpColDelim).join(colDelim) + '"',
+
+
+
+                    // Data URI
+                    csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+
+                    console.log(csv);
+
+                	if (window.navigator.msSaveBlob) { // IE 10+
+                		//alert('IE' + csv);
+                		window.navigator.msSaveOrOpenBlob(new Blob([csv], {type: "text/plain;charset=utf-8;"}), "csvname.csv")
+                	}
+                	else {
+                		$(this).attr({ 'download': filename, 'href': csvData, 'target': '_blank' });
+                	}
+            }
+
+            // This must be a hyperlink
+            $("#exportCsv").on('click', function (event) {
+
+                exportTableToCSV.apply(this, [$('#DeliveriesSpreadsheet'), 'export.csv']);
+
+                // IF CSV, don't do event.preventDefault() or return false
+                // We actually need this to be a typical hyperlink
+            });
+
+
+        });
+    </script>
+<% end %>

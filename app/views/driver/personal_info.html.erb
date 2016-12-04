@@ -1,0 +1,165 @@
+
+<%= form_for @driver, url: personal_info_driver_index_path , :method => 'POST' , :html => {:class => 'form'}  do |f| %>
+
+    <!-- Main content -->
+    <section class="content content-bg">
+        <div class="row">
+            <div class="col-lg-12 col-xs-12">
+                <h3 class="instruction">
+                    THE INFORMATION IN THIS FORM WILL BE TREATED IN STRICTEST CONFIDENTIALITY IN ACCORDANCE WITH THE 1998 DATA PROTECTION ACT.
+                </h3>
+
+                <p class="instruction">
+                    Due to the high security of some of iWAD Customers, you are required to supply personal details to enable security checks to be carried out where appropriate. Please ensure all sections of this application form are completed and there are no gaps.
+                </p>
+            </div><!-- ./col -->
+        </div><!-- /.row -->
+        <br />
+        <% if @driver && @driver.errors && @driver.errors.count > 0 %>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="alert alert-error alert-block" role="alert">
+                        <ul class="errorMessageList">
+                            <% @driver.errors.full_messages.each do |error| %>
+                                <li><%= error %></li>
+                            <% end %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+        <div class="row">
+            <div class="col-lg-6 col-xs-12">
+                <div class="form">
+                    <div class="form-group">
+                        <label class="control-label col-lg-4 col-xs-12" for="title">Title</label>
+                        <div class="col-lg-3 col-xs-12">
+                            <select class="form-control dropdown" id="driver[title]"  name="driver[title]">
+                                <option>Mr</option>
+                                <option>Mrs</option>
+                                <option>Miss</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- ./col -->
+
+            <div class="col-lg-6 col-xs-12">
+                <div class="form">
+                    <div class="form-group">
+                        <label class="control-label col-lg-4 col-xs-12" for="driver[gender]">Gender</label>
+                        <div class="col-lg-8 col-xs-12">
+                            <label class="radio-inline"><input type="radio" value="Male" name="driver[gender]" checked>Male</label>
+                            <label class="radio-inline"><input type="radio" value="Female" name="driver[gender]">Female</label>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- ./col -->
+        </div><!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-6 col-xs-12">
+                <div class="form">
+                    <div class="form-group">
+                        <label class="control-label col-lg-4 col-xs-12" for="fname">First Name</label>
+                        <div class=" col-lg-7 col-xs-12">
+                            <%= f.text_field :first_name, id: 'fname', autofocus: true , class: 'form-control', placeholder:'Enter first name',:required => '' %>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- ./col -->
+
+            <div class="col-lg-6 col-xs-12">
+                <div class="form">
+                    <div class="form-group">
+                        <label class="control-label col-lg-4 col-xs-12" for="sname">Surname</label>
+
+                        <div class=" col-lg-7 col-xs-12">
+                            <%= f.text_field :surname, id: 'sname', autofocus: true , class: 'form-control', placeholder:'Enter surname',:required => '' %>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- ./col -->
+        </div><!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-6 col-xs-12">
+                <div class="form">
+                    <div class="form-group">
+                        <label class="control-label col-lg-4 col-xs-12" for="mname">Middle Name</label>
+                        <div class=" col-lg-7 col-xs-12">
+                            <%= f.text_field :middle_name, id: 'mname', autofocus: true , class: 'form-control', placeholder:'Enter Middle Name',:required => '' %>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- ./col -->
+
+            <div class="col-lg-6 col-xs-12">
+                <div class="form">
+                    <div class="form-group">
+                        <label class="control-label col-lg-4 col-xs-12" for="email">Email</label>
+                        <div class=" col-lg-7 col-xs-12">
+                            <%= f.email_field :email, id: 'email', autofocus: true , class: 'form-control', placeholder:'Enter Email',:required => '', disabled:'true' %>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- ./col -->
+        </div><!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-6 col-xs-12">
+                <div class="form">
+                    <div class="form-group">
+                        <label class="control-label col-lg-4 col-xs-12" for="mnum">Mobile Number</label>
+                        <div class=" col-lg-7 col-xs-12">
+                            <%= f.text_field :mobile_no, id: 'mnum', autofocus: true , class: 'form-control', placeholder:'Enter Mobile Number', :onkeypress => 'return onlyNumsAllowed(event);', :maxlength => '25',:required => '' %>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- ./col -->
+
+            <div class="col-lg-6 col-xs-12">
+                <div class="form">
+                    <div class="form-group">
+                        <label class="control-label col-lg-4 col-xs-12" for="lnum">Landline Number</label>
+                        <div class=" col-lg-7 col-xs-12">
+                            <%= f.text_field :land_no, id: 'lnum', autofocus: true , class: 'form-control', placeholder:'Enter Land-line Number', :onkeypress => 'return onlyNumsAllowed(event);', :maxlength => '25',:required => '' %>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div><!-- ./col -->
+        </div><!-- /.row -->
+
+      <div class="row">
+        <div class="col-lg-6 col-xs-12">
+          <div class="form">
+            <div class="form-group">
+              <label class="control-label col-lg-4 col-xs-12" for="mnum">Vehicle Type</label>
+              <div class=" col-lg-7 col-xs-12">
+                <%= f.select :delivery_vehicle_id, DeliveryVehicle.fetchWithVehicleTypes, {class: 'form-control'} %>
+
+                <%	 puts DeliveryVehicle.fetchWithVehicleTypes.inspect %>
+              </div>
+            </div>
+          </div>
+        </div><!-- ./col -->
+      </div><!-- /.row -->
+
+
+    </section>
+
+    <!-- Secondary Section -->
+    <section class="content content-bg">
+        <div class="row">
+            <div class="col-lg-10 col-xs-12">
+                <h3 class="instruction"><i>If you are successful, you will be required to provide relevant evidence of the above details prior to your appointment.</i></h3>
+            </div><!-- ./col -->
+            <div class="col-lg-2 col-xs-12">
+                <button type="submit" class="btn btn-success" id="doneBtn">Done&nbsp;&nbsp;<i class="glyphicon glyphicon-ok"></i></button>
+            </div><!-- ./col -->
+        </div><!-- /.row -->
+    </section>
+<% end %>

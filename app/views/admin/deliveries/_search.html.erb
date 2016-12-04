@@ -1,0 +1,39 @@
+<div class="col-lg-5">
+
+  <%= form_tag admin_deliveries_path, method: 'get', class: "sidebar-form" do %>
+      <div class="input-group">
+        <%= select_tag(:option, options_for_select(
+        [
+          ['ID', 'id'],
+          ['Organisation', 'org'],
+          ['B2B User', 'user'],
+          ['Cost', 'cost'],
+          ['To location', 'to'],
+          ['Driver', 'driver'],
+          ['Contact', 'contact']
+        ], selected: params[:option]
+        ), class: "form-control", style: 'width: 40%;'
+        ) %>
+
+        <%= text_field_tag :q, params[:q], placeholder: "Search for a delivery", class: "form-control", style: 'width: 60%;' %>
+        <div class="input-group-btn">
+        <%= submit_tag "Search", :name => nil, class: "btn btn-flat", id: "search-btn"  %>
+        </div>
+      </div>
+  <% end %>
+
+
+
+
+
+</div>
+
+
+<!--<form action="#" method="get" class="sidebar-form">-->
+  <!--<div class="input-group">-->
+    <!--<input type="text" name="keyword" class="form-control" placeholder="Search for a delivery">-->
+    <!--<span class="input-group-btn">-->
+      <!--<button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>-->
+    <!--</span>-->
+  <!--</div>-->
+<!--</form>-->

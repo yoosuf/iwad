@@ -1,0 +1,17 @@
+<ul class="nav nav-tabs" role="tablist">
+
+
+
+
+  <li role="presentation" class="<%= controller.controller_name == 'users' && controller.action_name == 'index' && params[:keyword].blank? ? 'active': '' %>">
+
+    <a href="<%= url_for :controller => 'users', :action => 'index' %>" aria-controls="verified" role="tab">Approved
+      Users</a></li>
+
+
+  <li role="presentation" class="<%= controller.controller_name == 'users' && controller.action_name == 'deactive' && params[:keyword].blank? ? 'active': '' %>">
+
+
+    <a href="<%= url_for :controller => 'users', :action => 'deactive' %>" aria-controls="pending" role="tab">Deactivated
+      Users</a></li>
+</ul>

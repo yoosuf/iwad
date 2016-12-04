@@ -1,0 +1,93 @@
+<%= form_for @driver, url: rehabilitation_driver_index_path , :method => 'POST' , :html => {:class => 'form'}  do |field| %>
+	<!-- Main content -->
+	<section class="content content-bg">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<h3 class="instruction">
+					THE INFORMATION IN THIS FORM WILL BE TREATED IN STRICTEST CONFIDENTIALITY IN ACCORDANCE WITH THE 1998 DATA PROTECTION ACT.
+				</h3>
+						
+				<p class="instruction">
+					Due to the high security of some of iWAD Customers, you are required to supply personal details to enable security checks to be carried out where appropriate. Please ensure all sections of this application form are completed and there are no gaps.
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+		<% if @driver && @driver.errors && @driver.errors.count > 0 %>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="alert alert-error alert-block" role="alert">
+						<ul class="errorMessageList">
+							<% @driver.errors.full_messages.each do |error| %>
+								<li><%= error %></li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="control-label col-lg-7 col-xs-12">Do you have any convictions that are unspent under the Rehabilitation of Offenders Act 1974?</label>
+								
+					<div class="col-lg-5 col-xs-12">
+						<label class="radio-inline"><%= radio_button('driver','is_convictions_unspent_under_rehabilitation', '1') %>Yes</label>
+						<label class="radio-inline"><%= radio_button('driver','is_convictions_unspent_under_rehabilitation', '0') %>No</label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+				
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="control-label col-lg-12 col-xs-12" for="rehaboffence">If yes, please provide details and dates of the offence(s) and sentence :</label>
+								
+					<div class=" col-lg-8 col-xs-12">
+						<%= field.text_area :convictions_unspent_under_rehabilitation_info, autofocus: true , class: 'form-control', placeholder:'Enter any offences and their sentences' %>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="control-label col-lg-7 col-xs-12">Have you ever received a caution from the Police with respect to the Commission of a Criminal offence over the last 5 years?</label>
+								
+					<div class="col-lg-5 col-xs-12">
+						<label class="radio-inline"><%= radio_button('driver','is_criminal_offence', '1') %>Yes</label>
+						<label class="radio-inline"><%= radio_button('driver','is_criminal_offence', '0') %>No</label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="control-label col-lg-12 col-xs-12" for="criminaloffence">If yes, please provide details and dates of the offence(s) and sentence :</label>
+								
+					<div class=" col-lg-8 col-xs-12">
+						<%= field.text_area :criminal_offence_info, autofocus: true , class: 'form-control', placeholder:'Enter any offences and their sentences' %>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-6 col-xs-12"></div>
+			<div class="col-lg-6 col-xs-12">
+				<div class="col-lg-8 col-xs-12"></div>
+				<div class="col-lg-2 col-xs-12">
+					<button type="submit" class="btn btn-success">Proceed &nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></button>
+				</div><!-- ./col -->
+			</div>
+		</div><!-- /.row -->
+	</section>
+<% end %>

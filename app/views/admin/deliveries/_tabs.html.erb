@@ -1,0 +1,18 @@
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="<%= controller.controller_name == 'deliveries' && controller.action_name == 'index' && params[:q].blank? ? 'active': '' %>">
+    <a href="<%= url_for :controller => 'deliveries', :action => 'index' %>" aria-controls="verified" role="tab">Deliver
+      Now</a>
+  </li>
+  <li role="presentation"  class="<%= controller.controller_name == 'deliveries' && controller.action_name == 'later' ? 'active': '' %>">
+    <a href="<%= url_for :controller => 'deliveries', :action => 'later' %>" aria-controls="pending" role="tab">Deliver
+      Later</a>
+  </li>
+  <li role="presentation"  class="<%= controller.controller_name == 'deliveries' && controller.action_name == 'completed' ? 'active': '' %>">
+    <a href="<%= url_for :controller => 'deliveries', :action => 'completed' %>" aria-controls="completed" role="tab">Completed
+      Deliveries</a>
+  </li>
+  <li role="presentation"  class="<%= controller.controller_name == 'deliveries' && controller.action_name == 'abendand' ? 'active': '' %>">
+    <a href="<%= url_for :controller => 'deliveries', :action => 'abendand' %>" aria-controls="abendand" role="tab">Cancelled
+      Deliveries</a>
+  </li>
+</ul>

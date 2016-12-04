@@ -1,0 +1,84 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-lg-1">
+            <h4>Users</h4>
+        </div>
+          <%= render "search" %>
+    </div>
+    <br />
+
+    <div>
+
+
+        <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation">
+        <a href="<%= url_for :controller => 'admin/users', :action => 'index' %>" aria-controls="verified" role="tab">Approved
+          Users</a></li>
+      <li role="presentation" class="active">
+        <a href="<%= url_for :controller => 'admin/users', :action => 'deactive' %>" aria-controls="pending" role="tab">Deactivated
+          Users</a></li>
+    </ul>
+    <br/>
+
+    <!-- Tab panes -->
+    <div class="tab-content content-bg">
+      <div role="tabpanel" class="tab-pane active" id="verified">
+
+        <!-- Tab panes -->
+
+                                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="col-xs-1">User ID</th>
+                        <th class="col-xs-2">Registered On</th>
+                        <th class="col-xs-2">B2B Organisation</th>
+                        <th class="col-xs-2">User Details</th>
+                        <th class="col-xs-1">Prepaid credits</th>
+                        <th class="col-xs-1">Status</th>
+                        <th class="col-xs-1">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
+                       i = 0
+                       styleClass = 'success'
+                       @users.each do |user|
+                         i =i+1
+
+                         if i%2 == 0
+                           styleClass = 'info'
+                         end
+                    %>
+                        <tr class="info">
+                            <td class="col-xs-1"><%= user.id %></td>
+                            <td class="col-xs-2"><%= user.created_at.strftime("%d-%m-%Y %H:%M") %></td>
+                            <td class="col-xs-1"><%= user.organisation_name %></td>
+                            <td class="col-xs-2">
+                                <%= user.name %> <br>
+                                <%= user.email %><br>
+                                <%= user.phone_no %>
+                            </td>
+                            <td class="col-xs-1"><%=  user.prepaid_credit_count ? user.prepaid_credit_count : '0' %></td>
+                            <td class="col-xs-1"><%=  user.status ? 'Active' : 'Deactive' %> </td>
+                            <td class="col-xs-2">
+                                <a href="<%= url_for(edit_admin_user_path(user)) %>"><i class="glyphicon glyphicon-eye-open"></i>&nbsp; View</a>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    <% end %>
+                    </tbody>
+                </table>
+                <div class="pagination-wrapper">
+                    <%= will_paginate @users %>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="pending">
+
+            </div>
+        </div>
+
+    </div>
+</section>

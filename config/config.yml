@@ -1,0 +1,10 @@
+development:
+  site_url: "http://dev.iwadbackoffice.com/"
+test:
+  site_url: "http://0.0.0.0:3000"
+  
+staging:
+  site_url: "http://staging.iwadbackoffice.com/"
+
+production:
+  site_url: "http://iwadbackoffice.com/"

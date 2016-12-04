@@ -1,0 +1,255 @@
+<!-- Main content -->
+<%= form_for @driver, url: equal_opportunities_driver_index_path , :method => 'POST' , :html => {:class => 'form'}  do |f| %>
+
+	<section class="content content-bg">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<h3 class="instruction">
+					THE INFORMATION IN THIS FORM WILL BE TREATED IN STRICTEST CONFIDENTIALITY IN ACCORDANCE WITH THE 1998 DATA PROTECTION ACT.
+				</h3>
+						
+				<p class="instruction">
+					Due to the high security of some of iWAD Customers, you are required to supply personal details to enable security checks to be carried out where appropriate. Please ensure all sections of this application form are completed and there are no gaps.
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">This section of the application will be detached from your application and will be used solely for monitoring purposes, 
+						or to allow reasonable adjustments to be considered and made with regard to disability.</p>
+					</div>
+				</div><!-- ./col -->
+			</div><!-- /.row -->
+			<br />
+					
+			<div class="row">
+				<div class="col-lg-11 col-xs-12">
+					<div class="form-group">
+						<p class="col-lg-12 col-xs-12">The Company recognises and actively promotes the benefits of a diverse workforce and is committed to treating all employees 
+							with dignity and respect regardless of race, gender, disability, age, sexual orientation, religion or belief. We therefore welcome applications from all 
+							sections of the community.</p>
+					</div>
+				</div><!-- ./col -->
+			</div><!-- /.row -->
+			<br />
+		<% if @driver && @driver.errors && @driver.errors.count > 0 %>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="alert alert-error alert-block" role="alert">
+						<ul class="errorMessageList">
+							<% @driver.errors.full_messages.each do |error| %>
+								<li><%= error %></li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+					<div class="form-group">
+						<label class="col-lg-3 col-xs-12">WHITE</label>
+								
+						<div class="row">
+							<div class="col-lg-12 col-xs-12">
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'British' %>British</label>
+								</div>
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'Irish' %>Irish</label>
+								</div>
+								<div class="col-lg-3 col-xs-12"></div>
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'Any other White background' %>Any other White background</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div>
+			<hr />
+					
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+					<div class="form-group">
+						<label class="col-lg-3 col-xs-12">MIXED</label>
+								
+						<div class="row">
+							<div class="col-lg-12 col-xs-12">
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'White and Black Caribbean' %>White and Black Caribbean</label>
+								</div>
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'White and Black Asian' %>White and Black Asian</label>
+								</div>
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'White and Asian' %>White and Asian</label>
+								</div>
+								<div  class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'Any other Mixed background' %>Any other Mixed background</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div>
+			<hr />
+					
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+					<div class="form-group">
+						<label class="col-lg-3 col-xs-12">BLACK OR BLACK BRITISH</label>
+								
+						<div class="row">
+							<div class="col-lg-12 col-xs-12">
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'Caribbean' %>Caribbean</label>
+								</div>
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'African' %>African</label>
+								</div>
+								<div class="col-lg-3 col-xs-12"></div>
+								<div  class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'Any other Black background' %>Any other Black background</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div>
+			<hr />
+					
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+					<div class="form-group">
+						<label class="col-lg-3 col-xs-12">ASIAN OR ASIAN BRITISH</label>
+								
+						<div class="row">
+							<div class="col-lg-12 col-xs-12">
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'Indian' %>Indian</label>
+								</div>
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'Pakistani' %>Pakistani</label>
+								</div>
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'Bangladeshi' %>Bangladeshi</label>
+								</div>
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><%= f.radio_button :ethnicity,  'Any other Asian background' %>Any other Asian background</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div>
+			<hr />
+					
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+					<div class="form-group">
+						<label class="col-lg-3 col-xs-12">CHINESE OR OTHER ETHNIC BACKGROUND</label>
+								
+						<div class="row">
+								<div class="col-lg-12 col-xs-12">
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><input type="radio" name="ethnicity">Chinese</label>
+								</div>
+								<div class="col-lg-3 col-xs-12"></div>
+								<div class="col-lg-3 col-xs-12"></div>
+								<div class="col-lg-3 col-xs-12">
+									<label class="radio-inline"><input type="radio" name="ethnicity">Any other Ethnic background</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div>
+			<br />
+					
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-lg-12 col-xs-12" for="otherethnic">If any other background, please specify :</label>
+								
+						<div class="col-lg-10 col-xs-12">
+							<%= f.text_area :ethnicity_info, autofocus: true , class: 'form-control', placeholder:'Enter description of other ethnic background' %>
+
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div><!-- /.row -->
+			<br />
+					
+			<div class="row">
+				<div class="col-lg-6 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-lg-3 col-xs-12" for="dob">Date of Birth</label>
+											
+						<div class="col-lg-7 col-xs-12">
+							<div class="input-group date">
+								<%= f.text_field :date_of_birth, autofocus: true , class: 'form-control datePicker', placeholder:'mm/dd/yyyy' %>
+
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div><!-- /.row -->
+			<br />
+					
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-lg-7 col-xs-12">Do you consider yourself to have a disability?</label>
+								
+						<div class="col-lg-5 col-xs-12">
+							<label class="radio-inline"><%= f.radio_button :is_disability,  '1' %><input type="radio" name="equalopp" checked>Yes</label>
+							<label class="radio-inline"><%= f.radio_button :is_disability,  '0' %><input type="radio" name="equalopp">No</label>
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div><!-- /.row -->
+			<br />
+					
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-lg-12 col-xs-12" for="equaloppdesc">If yes, please provide details :</label>
+						<div class="col-lg-10 col-xs-12">
+							<%= f.text_area :disability_info, autofocus: true , class: 'form-control', placeholder:'Enter any disabilities' %>
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div><!-- /.row -->
+			<br />
+					
+			<div class="row">
+				<div class="col-lg-12 col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-lg-12 col-xs-12" for="personalinfodesc">If you wish, you may disclose any information about yourself in this section about your religion or sexual orientation :</label>
+						<div class="col-lg-10 col-xs-12">
+							<%= f.text_area :sexual_orientation, autofocus: true , class: 'form-control', placeholder:'Enter sexual orientation' %>
+						</div>
+					</div>
+				</div><!-- ./col -->
+			</div><!-- /.row -->
+			<br />
+					
+			<div class="row">
+				<div class="col-lg-10 col-xs-12"></div>
+				<div class="col-lg-2 col-xs-12">
+					<button type="submit" class="btn btn-success">Proceed &nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></button>
+				</div><!-- ./col -->
+			</div><!-- /.row -->
+		</div><!-- /.row -->
+	</section>
+<% end %>
+<script>
+	$('.datePicker').datepicker();
+</script>

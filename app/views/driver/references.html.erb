@@ -1,0 +1,173 @@
+<!-- Main content -->
+<%= form_for @driver, url: references_driver_index_path , :method => 'POST' , :html => {:class => 'form'}  do |f| %>
+
+	<section class="content content-bg">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<h3 class="instruction">
+					THE INFORMATION IN THIS FORM WILL BE TREATED IN STRICTEST CONFIDENTIALITY IN ACCORDANCE WITH THE 1998 DATA PROTECTION ACT.
+				</h3>
+						
+				<p class="instruction">
+					Due to the high security of some of iWAD Customers, you are required to supply personal details to enable security checks to be carried out where appropriate. Please ensure all sections of this application form are completed and there are no gaps.
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">Please provide the names and addresses of two previous employers including your most recent, whom we can contact. If you are unable to supply these, please supply the details of two referees whom we can contact to conduct a personal reference. These cannot be family members.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+		<% if @driver && @driver.errors && @driver.errors.count > 0 %>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="alert alert-error alert-block" role="alert">
+						<ul class="errorMessageList">
+							<% @driver.errors.full_messages.each do |error| %>
+								<li><%= error %></li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>
+		<%= f.fields_for :driver_references do |field| %>
+			<% if field.options[:child_index]<= 1 %>
+
+				<div class="row">
+					<div class="col-lg-6 col-xs-12">
+						<div class="form-group">
+							<p class="instruction">Reference <%= field.options[:child_index] + 1 %></p>
+						</div>
+					</div><!-- ./col -->
+				</div><!-- /.row -->
+
+				<div class="row">
+					<div class="col-lg-6 col-xs-12">
+						<div class="form-group">
+							<label class="control-label col-lg-3 col-xs-12" for="refonename">Name</label>
+
+							<div class="col-lg-7 col-xs-12">
+								<%= field.text_field :name, autofocus: true , class: 'form-control', placeholder:'Enter name' %>
+
+							</div>
+						</div>
+					</div><!-- ./col -->
+
+					<div class="col-lg-6 col-xs-12">
+						<div class="form-group">
+							<label class="control-label col-lg-3 col-xs-12" for="refonetime">How long have you known this person?</label>
+
+							<div class="col-lg-7 col-xs-12">
+								<%= field.text_field :how_long_know, autofocus: true , class: 'form-control', placeholder:'Enter number of years' %>
+
+							</div>
+						</div>
+					</div><!-- ./col -->
+				</div><!-- /.row -->
+				<br />
+
+				<div class="row">
+					<div class="col-lg-6 col-xs-12">
+						<div class="form-group">
+							<label class="control-label col-lg-3 col-xs-12" for="refonerel">Relationship</label>
+
+							<div class="col-lg-7 col-xs-12">
+								<%= field.text_field :relationship, autofocus: true , class: 'form-control', placeholder:'Enter relationship' %>
+
+							</div>
+						</div>
+					</div><!-- ./col -->
+
+					<div class="col-lg-6 col-xs-12">
+						<div class="form-group">
+							<label class="control-label col-lg-3 col-xs-12" for="refoneorg">Organization</label>
+
+							<div class="col-lg-7 col-xs-12">
+								<%= field.text_field :organization, autofocus: true , class: 'form-control', placeholder:'Enter organization' %>
+							</div>
+						</div>
+					</div><!-- ./col -->
+				</div><!-- /.row -->
+				<br />
+
+				<div class="row">
+					<div class="col-lg-6 col-xs-12">
+						<div class="form-group">
+							<label class="control-label col-lg-3 col-xs-12" for="refoneaddr">Address</label>
+
+							<div class="col-lg-7 col-xs-12">
+								<%= field.text_area :address, autofocus: true , class: 'form-control', placeholder:'Enter address' %>
+
+							</div>
+						</div>
+					</div><!-- ./col -->
+
+					<div class="col-lg-6 col-xs-12">
+						<div class="form-group">
+							<label class="control-label col-lg-3 col-xs-12" for="refonepostcode">Postcode</label>
+
+							<div class="col-lg-7 col-xs-12">
+								<%= field.text_field :postcode, autofocus: true , class: 'form-control', placeholder:'Enter postcode' %>
+							</div>
+						</div>
+					</div><!-- ./col -->
+				</div><!-- /.row -->
+				<br />
+
+				<div class="row">
+					<div class="col-lg-6 col-xs-12">
+						<div class="form-group">
+							<label class="control-label col-lg-3 col-xs-12" for="refonetel">Telephone Number</label>
+
+							<div class="col-lg-7 col-xs-12">
+								<%= field.text_field :telephone, autofocus: true , class: 'form-control', placeholder:'Enter telephone number', onkeypress: 'return onlyNumsAllowed(event);' %>
+
+							</div>
+						</div>
+					</div><!-- ./col -->
+
+					<div class="col-lg-6 col-xs-12">
+						<div class="form-group">
+							<label class="control-label col-lg-3 col-xs-12" for="refonemail">Email</label>
+
+							<div class="col-lg-7 col-xs-12">
+								<%= field.text_field :email, autofocus: true , class: 'form-control', placeholder:'Enter email' %>
+
+							</div>
+						</div>
+					</div><!-- ./col -->
+				</div><!-- /.row -->
+				<br />
+
+				<div class="row">
+					<div class="col-lg-12 col-xs-12">
+						<div class="form-group">
+							<label class="col-lg-4 col-xs-12">Are you willing for this referee to be contacted prior to the interview?</label>
+
+							<div class="col-lg-5 col-xs-12">
+								<label class="radio-inline"><%= field.radio_button :is_contacted_prior_to_interview,  '1' %>Yes</label>
+								<label class="radio-inline"><%= field.radio_button :is_contacted_prior_to_interview,  '0' %>No</label>
+							</div>
+						</div>
+					</div><!-- ./col -->
+				</div><!-- /.row -->
+			<% end %>
+		<% end %>
+		<div class="row">
+			<div class="col-lg-6 col-xs-12"></div>
+			<div class="col-lg-6 col-xs-12">
+				<div class="col-lg-8 col-xs-12"></div>
+				<div class="col-lg-2 col-xs-12">
+					<button type="submit" class="btn btn-success">Proceed &nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></button>
+				</div><!-- ./col -->
+			</div>
+		</div><!-- /.row -->
+	</section>
+	<br />
+<% end %>

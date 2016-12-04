@@ -1,0 +1,45 @@
+<tr class="info">
+  <td class="col-xs-1"><%= delivery.id %></td>
+  <td class="col-xs-2">
+    <% if delivery.delivery_date.present? %>
+        Created <%= delivery.created_at.strftime("%d-%m-%Y %H:%M") %> <br>
+        Schedule <%= delivery.delivery_date.strftime("%d-%m-%Y %H:%M") %>
+    <% else %>
+        <%= delivery.created_at.strftime("%d-%m-%Y %H:%M") %>
+    <% end%>
+  </td>
+  <td><%= delivery.user.nil? ? '' : delivery.user.organisation_name %></td>
+  <td>
+    <%= delivery.user.nil? ? '' : delivery.user.name %>
+  </td>
+  <td><%= delivery.driver.nil? ? '' : delivery.driver.name %></td>
+  <td class="col-xs-1">
+    <%= number_to_currency(delivery.cost.nil? ? 0 : delivery.cost, unit: "£", separator: ".", delimiter: "") %>
+  </td>
+  <td class="col-xs-1"><%= delivery.getStringDeliveryStatus %></td>
+  <td class="col-xs-2">
+    <div class="btn-group">
+      <button type="button" class="btn btn-xs btn-default">Action</button>
+      <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="<%= url_for :controller => 'deliveries', :action => 'show', :id => delivery.id %>"><i class="glyphicon glyphicon-eye-open"></i>View PoD</a>
+        </li>
+        <li>
+          <a href="<%= url_for :controller => 'deliveries', :action => 'edit', :id => delivery.id %>"><i class="fa fa-pencil" aria-hidden="true"></i>
+            Edit</a></li>
+        <li>
+          <a href="<%= url_for :controller => 'deliveries', :action => 'allocation', :id => delivery.id %>"><i class="fa fa-list-ol" aria-hidden="true"></i>
+            Allocation</a></li>
+        <li role="separator" class="divider"></li>
+        <li>
+          <a href="<%= url_for :controller => 'deliveries', :action => 'cancel', :id => delivery.id %>" data-confirm="Do you want to cancel the delivery id <%= delivery.id %>?"><i class="fa fa-ban" aria-hidden="true"></i>
+            Cancel</a>
+        </li>
+      </ul>
+    </div>
+  </td>
+</tr>

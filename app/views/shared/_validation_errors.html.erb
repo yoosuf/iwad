@@ -1,0 +1,13 @@
+<% if resource && resource.errors && resource.errors.count > 0 %>
+    <div class="row">
+    <div class="col-xs-12">
+        <div class="alert alert-error alert-block" role="alert">
+            <ul class="errorMessageList">
+                <% resource.errors.full_messages.each do |error| %>
+                    <li><%= error %></li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>
+<% end %>

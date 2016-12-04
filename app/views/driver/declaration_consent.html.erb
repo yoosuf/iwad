@@ -1,0 +1,139 @@
+<%= form_for @driver, url: declaration_consent_driver_index_path , :method => 'POST' , :html => {:class => 'form'}  do |f| %>
+	<!-- Main content -->
+	<% if @driver && @driver.errors && @driver.errors.count > 0 %>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="alert alert-error alert-block" role="alert">
+					<ul class="errorMessageList">
+						<% @driver.errors.full_messages.each do |error| %>
+							<li><%= error %></li>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<% end %>
+	<section class="content content-bg">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<h3 class="instruction">
+					THE INFORMATION IN THIS FORM WILL BE TREATED IN STRICTEST CONFIDENTIALITY IN ACCORDANCE WITH THE 1998 DATA PROTECTION ACT.
+				</h3>
+						
+				<p class="instruction">
+					Due to the high security of some of iWAD Customers, you are required to supply personal details to enable security checks to be carried out where appropriate. Please ensure all sections of this application form are completed and there are no gaps.
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+			
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">The information contained within this application form will be veirfied by iWAD using a pre-employment 
+						screening specialist. We will handle your data in accordance with the requirements of the Data Protection Act 1998 and any relevant local legislation. 
+						iWAD will only use your personal data for the purpose of pre-employment screening.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">I understand and agree that my appointment is conditional upon the verification to iWAD, provided on the form and that 
+						this information and that contained on attached documents is true and completed to the best of my knowledge.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">I also understand that I may incur civil and/or criminal liability if I attempt to obtain an appointment by deception 
+						and that any misrepresentation, omission of a material fact or deception will be the cause for immediate cancellation of consideration for 
+						employment/appointment, or for dismissal if already employed/appointed.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">I hereby authorise iWAD to verify information presented on this formand to the extent permitted by law, to procure 
+						investigative and credit history reports for that purpose in the UK, and if appropriate, overseas.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">I also voluntarily authorise iWAD to perform reference checks of my employment/assignment history, including my current 
+						employment/assignment. I understand that no contact will be made with my current employer/agency until I have either resigned my employment with them 
+						or agreed to the contact in advance of this.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">I am aware that it may be necessary, if I have lived or worked outside the European Union, for the information given in 
+						this application to be tranferred to countries outside of the European Union. I understand that this would only be for the purpose of verification, and 
+						that some countries have less comprehensive data protection legislation than those in the European Union.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">I hereby authorise iWAD to check details with/against fraud prevention databases. Should our investigations identify fraud 
+						or the commission of any other criminal offence by you <a href="#">on your part</a> when applying for, or during the course of your duties with iWAD, we 
+						will record details of this on the fraud prevention databases. This information may be accessed from the UK and other countries, and used by law 
+						enforcement agencies and by us and other organisations to prevent fraud. Please sign below to confirm that you understand how your data will be used 
+						should our investigations identify fraud or the commission of any other criminal offence by you.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">I authorise iWAD to apply for a disclosure of criminal convictions on my behalf and I agree to provide any assistance or 
+						documentation required to complete the Disclosure application. I consent to the information contained in the Disclosure being viewed by iWAD. I understand 
+						that iWAD will treat the Disclosure in accrodance with their policy on the secure storage, handling, use, retention and disclosure of Disclosure information.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-11 col-xs-12">
+				<div class="form-group">
+					<div class="col-lg-12 col-xs-12">
+						<label class="checkbox-inline"><%= f.check_box :declaration_agreement %>I hereby agree that I have read the above declaration and consent.</label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+				
+		<div class="row">
+			<div class="col-lg-6 col-xs-12"></div>
+			<div class="col-lg-6 col-xs-12">
+				<div class="col-lg-8 col-xs-12"></div>
+				<div class="col-lg-2 col-xs-12">
+					<button type="submit" class="btn btn-success">Proceed &nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></button>
+				</div><!-- ./col -->
+			</div>
+		</div><!-- /.row -->
+	</section>
+<% end %>

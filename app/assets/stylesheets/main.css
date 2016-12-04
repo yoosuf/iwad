@@ -1,0 +1,1760 @@
+/* All css items we modify goes here... */
+a, button {
+	outline: none !important;
+	text-decoration: none !important;
+}
+
+label, textarea, input, p, h3, h4, .main-footer {
+	font-family: AntennaReg !important;
+}
+
+.main-footer {
+	font-size: 12px;
+	text-align: left;
+	color: #9d9d9d;
+}
+
+.alert-success {
+	position: relative;
+	margin-top: 3%;
+	border: none !important;
+	border-radius: 0px !important;
+}
+
+.alert-error {
+	position: relative;
+	margin-top: 4.5%;
+	border: none !important;
+	border-radius: 0px !important;
+}
+
+.sidebar-form .form-control {
+	border-radius: 0px;
+	border-width: 2px;
+}
+
+.sidebar-form .form-control:focus {
+	border: 2px #f7931e solid !important; 
+}
+
+.navbar-color {
+	background-color: #29282a;
+}
+
+#search-btn {
+	background: #f7931e;
+	color: #fff;
+}
+
+/* Temp class */
+.modified {
+	font-family: AntennaReg !important;
+}
+/* ------------- */
+
+.main-header {
+	position: fixed;
+	width: 100%;
+}
+
+.main-header .main-title {
+	display: block;
+	font-family: AntennaBld;
+	font-size: 24px;
+	margin-top: 0.5%;
+	color: #ffffff;
+}
+
+.font-resize h3 {
+	font-size: 16px !important;
+}
+
+.logo-bg {
+	background-color: #29282a;
+}
+
+.active-bg {
+	background-color: #212129;
+}
+
+.active-bg a{
+	color: #f7931e !important;
+}
+
+.sidebar {
+	margin-top: 2%;
+}
+
+.sidebar, .main-sidebar {
+	background-color: #29282a;
+	position: fixed;
+	width: 12%;
+}
+
+.sidebar-menu > li {
+	border-bottom: 1px solid #2d2d2d;
+}
+
+.sidebar a {
+	color: #757575;
+}
+
+.sidebar a:hover, a:focus {
+	color: #f7931e !important;
+	text-decoration: none;
+}
+
+.sidebar-menu li:hover {
+	background-color: #212129;
+}
+
+.sidebar-toggle {
+	color: #ffffff;
+}
+
+.main-header .sidebar-toggle:hover {
+	color: #f7931e;
+	text-decoration: none;
+}
+
+.main-header .sidebar-toggle:focus, .sidebar-toggle:active {
+	color: #29282a;
+	text-decoration: none;
+}
+
+.instruction {
+	font-family: AntennaBld;
+	font-size: 13px;
+}
+
+.content {
+	margin-top: 3%;
+	padding-bottom: 3%;
+}
+
+.content-bg {
+	background-color: #ffffff;
+}
+
+textarea {
+	resize: none;
+}
+
+/* Back-to-Top */
+a.back-to-top {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 7%;
+	right: 1%;
+	background: #757575 url('up-arrow-icon.png') no-repeat center 43%;
+	opacity: 0.5;
+	text-indent: -9999px;
+	border: 3px solid #29282a;
+	border-radius: 30px;
+}
+
+a.back-to-top:hover {
+	background-color: #f7931e;
+	border-color: #757575;
+	opacity: 1;
+}
+
+/* New styles */
+.sidebar li, .content .form, .btn {
+	font-family: AntennaReg;
+}
+
+.content-wrapper {
+	min-height: 500px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(41,40,42,0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(247,147,30,1);
+}
+
+::-moz-scrollbar {
+    width: 12px;
+}
+ 
+::-moz-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-moz-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(41,40,42,0.5);
+}
+
+::-moz-scrollbar-thumb:hover {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(247,147,30,1);
+}
+/* ---------- */
+
+.login-box {
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top: 15%;
+}
+
+.login-wrapper {
+	background: url('login-bg.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.navbar-color {
+	background-color: #29282a;
+}
+
+.title-color {
+	color: #ffffff;
+}
+
+.info p {
+	color: #ffffff;
+	padding-top: 10%;
+}
+
+.logo-bg {
+	background-color: #29282a;
+}
+
+.content-bg-alt {
+	background-color: #f3f3f4;
+}
+
+.sidebar-menu .header {
+	background-color: #1f1f20;
+	color: #6d6d6d;
+	border-bottom: none;
+}
+
+.left-margin {
+	margin-left: 1%;
+}
+
+.table-bordered {
+	background-color: #ffffff;
+	height: auto;
+	overflow-y: auto;
+	font-family: AntennaReg !important;
+}
+.table-bordered thead tr th
+{
+	border-bottom:0px !important;
+	color: #ffffff;
+	background:#29282a;
+}
+.table-bordered  tbody tr td
+{
+	font-size:12px !important;
+}
+.table-bordered  tbody tr:nth-child(even)   td
+{
+	background: #f2f2f2 !important;
+}
+.table-bordered  tbody tr:nth-child(odd)  td
+{
+	background: #f4ede5  !important;
+}
+.tab-content {
+	min-height: 500px;
+}
+.active-bg {
+	background-color: #212129;
+}
+
+.active-bg a{
+	color: #f7931e !important;
+}
+
+.content-height {
+	min-height: 500px;
+}
+
+.main-footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+.main-footer div {
+	display: none;
+}
+.errorMessageList li
+{
+	font-family: AntennaReg !important;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus
+{
+	background:#f7931e !important;
+	color: #fff !important;
+	border:none !important;
+	border-radius:0px !important;
+}
+.nav-tabs > li
+{
+	margin-right:-1px;
+	font-family: AntennaReg !important;
+}
+.nav-tabs > li > a
+{
+	background:#29282a !important;
+	border:none !important;
+	border-radius:0px !important;
+	
+}
+.nav-tabs > li a
+{
+	color:#fff !important;
+	border:none !important;
+}
+.nav-tabs > li a:hover
+{
+	background:#29282a !important;
+	border:none !important;
+	border-radius:0px !important;
+}
+
+.pagination-wrapper {
+	position: relative;
+	margin-top: -2%;
+}
+
+
+/* forgot password styles */
+.forgot-pw-wrapper {
+	background: url('forgot-pw-bg.png') no-repeat center center fixed !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
+}
+
+.forgot-pw {
+	color: #a3b1ba;
+	text-align: center;
+	margin: 10% auto;
+	width: 100%;
+	height: auto;
+}
+
+.forgot-pw-desc {
+	padding-left: 12%;
+	padding-right: 12%;
+	font-size: 100%;
+}
+
+.send-link {
+	margin: 5% auto;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+
+.send-link  label {
+	color: #f7931e !important;
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+.field {
+	text-align: left;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin: 0 auto;
+	width: 20%;
+}
+
+.field #driver_email {
+	margin-top: 5%;
+	margin-left: 3%;
+	width: 85%;
+	font-size: 100%;
+	background: transparent;
+	border: none !important;
+	outline: none !important;
+	color: #ffffff;
+}
+
+::-webkit-input-placeholder {
+   color: #a3b1ba;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #a3b1ba;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #a3b1ba;  
+}
+
+:-ms-input-placeholder {  
+   color: #a3b1ba;  
+}
+
+.hr-colored {
+	background: #a3b1ba;
+	margin: 1% auto;
+	width: 18%;
+}
+
+.send-pw-btn {
+	margin: 2% auto;
+	height: 40px;
+	width: 15%;
+	border-radius: 24px;
+	color: #fff;
+	background-color: #f7931e;
+	border: none;
+	font-family: AntennaBld;
+	font-size: 100%;
+	position: relative;
+	outline: none !important;
+}
+
+.back-to-login {
+	margin: 3% auto;
+}
+
+.back-to-login a {
+	color: #ffffff;
+	font-family: AntennaReg;
+	font-size: 100%;
+}
+
+.back-to-login a:hover, a:focus {
+	color: #f7931e;
+}
+
+.inline-file-upload {
+	display: inline-flex !important;
+}
+
+
+/* start media screen styles */
+@media screen and (max-width: 1600px) {
+	.content {
+		font-size: 12px;
+		margin-top: 5%;
+		padding-bottom: 5%;
+	}
+	
+	.font-resize h3 {
+		font-size: 12px !important;
+	}
+	
+	.sidebar {
+		font-size: 12px;
+	}
+	
+	.connectedSortable .header {
+		font-size: 12px;
+	}
+
+	.connectedSortable h3 {
+		font-size: 16px;
+	}
+	
+	.content-height {
+		min-height: 350px;
+	}
+	
+	.sidebar, .main-sidebar {
+		background-color: #29282a;
+		position: fixed;
+		width: 230px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.sidebar {
+		font-size: 10px;
+	}
+	
+	.main-header .main-title {
+		font-size: 22px;
+		line-height: 50px;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+}
+
+
+/* Media queries for mobile phones */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+	
+	.forgot-pw {
+		color: #a3b1ba;
+		text-align: center;
+		margin: 20% auto;
+		width: 100%;
+		height: auto;
+	}
+
+	.forgot-pw-desc {
+		padding-left: 10%;
+		padding-right: 10%;
+		font-size: 100%;
+	}
+
+	.send-link {
+		margin: 20% auto;
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+
+	.send-link  label {
+		color: #f7931e !important;
+		text-transform: uppercase;
+		font-size: 75%;
+	}
+
+	.field {
+		text-align: left;
+		padding-left: 1%;
+		padding-right: 1%;
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	.field #driver_email {
+		margin-top: 5%;
+		margin-left: 3%;
+		width: 80%;
+		font-size: 100%;
+		background: transparent;
+		border: none !important;
+		outline: none !important;
+		color: #ffffff;
+	}
+	
+	.hr-colored {
+		background: #a3b1ba;
+		margin: 1% auto;
+		width: 78%;
+	}
+
+	.send-pw-btn {
+		margin: 15% auto;
+		height: 35px;
+		width: 60%;
+		line-height: 35px;
+		border-radius: 20px;
+		color: #fff;
+		background-color: #f7931e;
+		border: none;
+		font-family: AntennaBld;
+		font-size: 95%;
+		position: relative;
+		outline: none !important;
+	}
+
+	.back-to-login {
+		margin: 12% auto;
+	}
+
+	.back-to-login a {
+		color: #ffffff;
+		font-family: AntennaReg;
+		font-size: 100%;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+
+
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* ----------- Galaxy S4 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+
+
+/* ----------- HTC One ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+
+/* Media queries for Tablets */
+
+/* ----------- iPad mini ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* ----------- Galaxy Tab 10.1 ----------- */
+
+/* Portrait and Landscape */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media 
+  (max-device-width: 800px) 
+  and (orientation: portrait) { 
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media 
+  (max-device-width: 1280px) 
+  and (orientation: landscape) { 
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* ----------- Asus Nexus 7 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: portrait) {
+	.sidebar-menu li a i {
+		visibility: hidden;
+		display: none;
+	}
+  
+	.sidebar-menu li a span {
+		background-color: transparent !important;
+	}
+	
+	.main-title, .sidebar-toggle {
+		color: #f7931e;
+	}
+	
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: landscape) {
+	a.back-to-top {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		bottom: 7%;
+		right: 1%;
+		background: #f7931e url('up-arrow-icon.png') no-repeat center 43%;
+		opacity: 0.5;
+		text-indent: -9999px;
+		border: 2px solid #757575;
+		border-radius: 30px;
+	}
+}
+
+.sidebar-menu li > a
+{
+	outline:none;
+}
+

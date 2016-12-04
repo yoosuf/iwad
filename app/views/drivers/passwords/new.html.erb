@@ -1,0 +1,31 @@
+<div class="forgot-pw">
+	<h3 class="forgot-pw-desc">Enter our registered email to retrieve your password</h3>
+
+	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+		<%= devise_error_messages! %>
+		
+		<div class="send-link">
+			<div class="field">
+				<%= f.label :email %><br />
+				<%= image_tag "email-icon.png" %>
+				<%= f.email_field :email, autofocus: true, placeholder: "Your Email" %>
+			</div>
+			<hr class="hr-colored" />
+
+			<div class="actions">
+				<%= f.submit "SEND PASSWORD", class: "send-pw-btn" %>
+			</div>
+			
+			<div class="back-to-login">
+				<a href="#">I have my password</a>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('body').removeClass('login-wrapper');
+		$('body').addClass('forgot-pw-wrapper');
+	});
+</script>

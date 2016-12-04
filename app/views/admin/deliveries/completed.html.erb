@@ -1,0 +1,59 @@
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-lg-1">
+      <h4>Deliveries</h4>
+    </div>
+    <%= render "search" %>
+
+  </div>
+  <br/>
+
+  <div>
+
+    <%= render "tabs" %>
+    <br/>
+
+    <!-- Tab panes -->
+    <div class="tab-content content-bg">
+      <div role="tabpanel" class="tab-pane" id="verified">
+      </div>
+      <div role="tabpanel" class="tab-pane active" id="pending">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th class="col-xs-1">Delivery ID</th>
+            <th class="col-xs-2">Date time</th>
+            <th class="col-xs-1">B2B Org</th>
+            <th class="col-xs-2">B2B User</th>
+            <th class="col-xs-2">Driver Name</th>
+            <th class="col-xs-1">Delivery Cost</th>
+            <th class="col-xs-1">Status</th>
+            <th class="col-xs-2">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <%
+            i = 0
+            styleClass = 'success'
+            @deliveries.each do |delivery|
+              i =i+1
+
+              if i%2 == 0
+                styleClass = 'info'
+              end
+          %>
+              <%= render "delivery", delivery: delivery %>
+
+
+          <% end %>
+          </tbody>
+        </table>
+        <div class="pagination-wrapper content-bg">
+          <%= will_paginate @deliveries %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

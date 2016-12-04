@@ -1,0 +1,280 @@
+<!-- Main content -->
+<%= form_for @driver, url: supporting_documents_driver_index_path , :method => 'POST' , :html => {:class => 'form'}  do |field| %>
+
+	<section class="content content-bg">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<h3 class="instruction">
+					THE INFORMATION IN THIS FORM WILL BE TREATED IN STRICTEST CONFIDENTIALITY IN ACCORDANCE WITH THE 1998 DATA PROTECTION ACT.
+				</h3>
+							
+				<p class="instruction">
+					Due to the high security of some of iWAD Customers, you are required to supply personal details to enable security checks to be carried out where appropriate. Please ensure all sections of this application form are completed and there are no gaps.
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+		<% if @driver && @driver.errors && @driver.errors.count > 0 %>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="alert alert-error alert-block" role="alert">
+						<ul class="errorMessageList">
+							<% @driver.errors.full_messages.each do |error| %>
+								<li><%= error %></li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">Below is a list of all documents and details that must be submitted, signed or completed by all new Drivers working with iWAD.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<p class="instruction">
+					Your Details
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+				
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">PHOTO OF SELF (HEAD AND SHOULDERS)</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :photo_of_self %>
+						<label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+				
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">DRIVER LICENSE PAPER</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :license_paper %>
+						<label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">DRIVER LICENSE PHOTO ID</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :license_photo_id %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">1 X UTILITY BILL (NO MORE THAN 3 MONTHS OLD)</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :utility_bill %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">PASSPORT</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :passport %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">BANK DETAILS/PAYMENT TERMS</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :bank_details %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">PROOF OF NATIONAL INSURANCE</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :national_insurance %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">2 REFERENCES FOR GIT INSURANCE</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :git_insurance %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">EMERGENCY CONTACTS DOCUMENT</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :emergency_document %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">PHOTO, ID CARD, KEY CHAIN DOC AND UNIFORM INFO</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :uniform_info %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+	</section>
+	<br />
+			
+	<!-- Secondary Section -->
+	<section class="content content-bg">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<p class="instruction">
+					Your Vehicle
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+				
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">INSURANCE CERTIFICATE</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :vehicle_insurance_certificate %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+				
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">VEHICLE REGISTRATION DOCUMENT (IF APPLICABLE)</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :vehicle_registration_document %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">M.O.T. CERTIFICATE (IF APPLICABLE)</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :vehicle_m_o_t_certificate %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">VEHICLE RENTAL AGREEMENT (IF APPLICABLE)</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :vehicle_rental_agreement %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">PHOTO OF YOUR VEHICLE (FRONT, REAR AND BOTH SIDES)</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :vehicle_photo %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<hr />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-4 col-xs-12">PROOF OF ROAD TAX</label>
+											
+					<div class="col-lg-5 col-xs-12 inline-file-upload">
+						<%= field.file_field :vehicle_road_tax %><label></label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-6 col-xs-12"></div>
+			<div class="col-lg-6 col-xs-12">
+				<div class="col-lg-8 col-xs-12"></div>
+				<div class="col-lg-2 col-xs-12">
+					<button type="submit" class="btn btn-success">Proceed &nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></button>
+				</div><!-- ./col -->
+			</div>
+		</div><!-- /.row -->
+	</section>
+<% end %>

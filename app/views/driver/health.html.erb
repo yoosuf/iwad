@@ -1,0 +1,65 @@
+<%= form_for @driver, url: health_driver_index_path , :method => 'POST' , :html => {:class => 'form'}  do |field| %>
+	<!-- Main content -->
+	<section class="content content-bg">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<h3 class="instruction">
+					THE INFORMATION IN THIS FORM WILL BE TREATED IN STRICTEST CONFIDENTIALITY IN ACCORDANCE WITH THE 1998 DATA PROTECTION ACT.
+				</h3>
+						
+				<p class="instruction">
+					Due to the high security of some of iWAD Customers, you are required to supply personal details to enable security checks to be carried out where appropriate. Please ensure all sections of this application form are completed and there are no gaps.
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+		<% if @driver && @driver.errors && @driver.errors.count > 0 %>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="alert alert-error alert-block" role="alert">
+						<ul class="errorMessageList">
+							<% @driver.errors.full_messages.each do |error| %>
+								<li><%= error %></li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>
+		<div class="row">
+			<div class="col-lg-6 col-xs-12">
+				<div class="form-group">
+					<label class="control-label col-lg-3 col-xs-12" for="absentdays">How many days were you absent through illness or injury in the last 12 months?</label>
+								
+					<div class="col-lg-7 col-xs-12">
+						<%= field.text_field :no_of_absent_dates, autofocus: true , class: 'form-control', placeholder:'Enter number of days absent' %>
+
+					</div>
+				</div>
+			</div><!-- ./col -->
+					
+			<div class="col-lg-6 col-xs-12">
+				<div class="form-group">
+					<label class="control-label col-lg-3 col-xs-12" for="absentdesc">If you were absent due to an injury, please provide details.</label>
+								
+					<div class="col-lg-7 col-xs-12">
+						<%= field.text_area :absent_desc, autofocus: true , class: 'form-control', placeholder:'Enter details of absence' %>
+
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-6 col-xs-12"></div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="col-lg-8 col-xs-12"></div>
+					<div class="col-lg-2 col-xs-12">
+						<button type="submit" class="btn btn-success">Proceed &nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></button>
+					</div><!-- ./col -->
+				</div>
+			</div><!-- /.row -->
+		</form>
+	</section>
+<% end %>

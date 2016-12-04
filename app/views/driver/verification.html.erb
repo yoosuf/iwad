@@ -1,0 +1,104 @@
+<%= form_for @driver, url: verification_driver_index_path , :method => 'POST' , :html => {:class => 'form'}  do |f| %>
+
+	<!-- Main content -->
+	<section class="content content-bg">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<h3 class="instruction">
+					THE INFORMATION IN THIS FORM WILL BE TREATED IN STRICTEST CONFIDENTIALITY IN ACCORDANCE WITH THE 1998 DATA PROTECTION ACT.
+				</h3>
+						
+				<p class="instruction">
+					Due to the high security of some of iWAD Customers, you are required to supply personal details to enable security checks to be carried out where appropriate. Please ensure all sections of this application form are completed and there are no gaps.
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+		<% if @driver && @driver.errors && @driver.errors.count > 0 %>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="alert alert-error alert-block" role="alert">
+						<ul class="errorMessageList">
+							<% @driver.errors.full_messages.each do |error| %>
+								<li><%= error %></li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="control-label col-lg-7 col-xs-12">Are you free to take up employment in the UK with no current legal restrictions?</label>
+								
+					<div class="col-lg-5 col-xs-12">
+						<label class="radio-inline"><%= f.radio_button :is_legal_restrictions,  '1' %>Yes</label>
+						<label class="radio-inline"><%= f.radio_button :is_legal_restrictions,  '0' %>No</label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">It is our statutory obligation in accordance with the Asylum Immigration Act 1996 that we must ask for proof that you are entitled to work in the UK.</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+				
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<p class="col-lg-12 col-xs-12">Should you be invited to attend an interview, you will need to bring prrof of eligibility with you. Please indicate what identification you will bring :</p>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<div class=" col-lg-6 col-xs-12">
+						<label class="checkbox-inline"><%= f.check_box :_is_bring_passport_for_interview %>British/EEA Passport</label>
+					</div>
+								
+					<div class=" col-lg-6 col-xs-12">
+						<label class="checkbox-inline"><%= f.check_box :_is_bring_certificate_for_interview %>British/EEA Certificate</label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<div class=" col-lg-6 col-xs-12">
+						<label class="checkbox-inline"><%= f.check_box :_is_bring_work_visa_for_interview %>Work Visa</label>
+					</div>
+								
+					<div class=" col-lg-6 col-xs-12">
+						<label class="checkbox-inline col-lg-3 col-xs-12"><%= f.check_box :_is_bring_other_for_interview %>Other (please specify)</label>
+									
+						<div class=" col-lg-7 col-xs-12">
+							<%= f.text_field :other_doc_for_interview, autofocus: true , class: 'form-control', placeholder:'Enter other eligible document' %>
+						</div>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-6 col-xs-12"></div>
+			<div class="col-lg-6 col-xs-12">
+				<div class="col-lg-8 col-xs-12"></div>
+				<div class="col-lg-2 col-xs-12">
+					<button type="submit" class="btn btn-success">Proceed &nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></button>
+				</div><!-- ./col -->
+			</div>
+		</div><!-- /.row -->
+	</section>
+<% end %>

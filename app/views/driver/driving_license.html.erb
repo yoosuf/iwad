@@ -1,0 +1,108 @@
+<%= form_for @driver, url: driving_license_driver_index_path , :method => 'POST' , :html => {:class => 'form'}  do |field| %>
+	<!-- Main content -->
+	<section class="content content-bg">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<h3 class="instruction">
+					THE INFORMATION IN THIS FORM WILL BE TREATED IN STRICTEST CONFIDENTIALITY IN ACCORDANCE WITH THE 1998 DATA PROTECTION ACT.
+				</h3>
+						
+				<p class="instruction">
+					Due to the high security of some of iWAD Customers, you are required to supply personal details to enable security checks to be carried out where appropriate. Please ensure all sections of this application form are completed and there are no gaps.
+				</p>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+		<% if @driver && @driver.errors && @driver.errors.count > 0 %>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="alert alert-error alert-block" role="alert">
+						<ul class="errorMessageList">
+							<% @driver.errors.full_messages.each do |error| %>
+								<li><%= error %></li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-7 col-xs-12">Do you hold a full license valid in the UK?</label>
+								
+					<div class="col-lg-5 col-xs-12">
+						<label class="radio-inline"><%= radio_button('driver','is_license_valid_in_uk', '1') %>Yes</label>
+						<label class="radio-inline"><%= radio_button('driver','is_license_valid_in_uk', '0') %>No</label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+				
+		<div class="row">
+			<div class="col-lg-6 col-xs-12">
+				<div class="form-group">
+					<label class="control-label col-lg-3 col-xs-12" for="empaddr">Driving License Number</label>
+								
+					<div class=" col-lg-7 col-xs-12">
+						<%= field.text_field :license_no, autofocus: true , class: 'form-control', placeholder:'Enter driving license number' %>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+				
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-7 col-xs-12">Are there any endorsements on your license?</label>
+								
+					<div class="col-lg-5 col-xs-12">
+						<label class="radio-inline"><%= radio_button('driver','is_endorsements_on_license', '1') %>Yes</label>
+						<label class="radio-inline"><%= radio_button('driver','is_endorsements_on_license', '0') %>No</label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="col-lg-7 col-xs-12">Have you had any blameworthy accidents in the last 3 years?</label>
+								
+					<div class="col-lg-5 col-xs-12">
+						<label class="radio-inline"><%= radio_button('driver','is_blameworthy_accidents', '1') %>Yes</label>
+						<label class="radio-inline"><%= radio_button('driver','is_blameworthy_accidents', '0') %>No</label>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+				
+		<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="form-group">
+					<label class="control-label col-lg-12 col-xs-12" for="accidentdet">If yes, please provide details :</label>
+								
+					<div class=" col-lg-8 col-xs-12">
+						<%= field.text_area :blameworthy_accident_info, autofocus: true , class: 'form-control', placeholder:'Enter details' %>
+
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- /.row -->
+		<br />
+					
+		<div class="row">
+			<div class="col-lg-6 col-xs-12"></div>
+			<div class="col-lg-6 col-xs-12">
+				<div class="col-lg-8 col-xs-12"></div>
+				<div class="col-lg-2 col-xs-12">
+					<button type="submit" class="btn btn-success">Proceed &nbsp;&nbsp;<i class="glyphicon glyphicon-arrow-right"></i></button>
+				</div><!-- ./col -->
+			</div>
+		</div><!-- /.row -->
+	</section>
+<% end %>

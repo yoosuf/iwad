@@ -1,0 +1,101 @@
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-lg-1">
+      <h4>Drivers</h4>
+    </div>
+    <div class="col-lg-4">
+      <%= render "search" %>
+
+    </div>
+  </div>
+  <br/>
+
+  <div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+
+      <li role="presentation">
+        <a href="<%= url_for :controller => 'drivers', :action => 'index' %>" aria-controls="verified" role="tab">View
+          Drivers</a>
+      </li>
+
+      <li role="presentation"  class="active">
+        <a href="<%= url_for :controller => 'drivers', :action => 'index' %>" aria-controls="verified" role="tab">Verified
+          Drivers</a>
+      </li>
+
+      <li role="presentation">
+        <a href="<%= url_for :controller => 'drivers', :action => 'pending_list' %>" aria-controls="pending" role="tab">Pending
+          Drivers</a></li>
+
+      <li role="presentation">
+        <a href="<%= url_for :controller => 'drivers', :action => 'suspend_list' %>" aria-controls="pending" role="tab">Suspend
+          Drivers</a></li>
+    </ul>
+    <br/>
+
+    <!-- Tab panes -->
+    <div class="tab-content content-bg">
+      <div role="tabpanel" class="tab-pane active" id="verified">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th class="col-xs-1">Driver ID</th>
+            <th class="col-xs-1">Registered On</th>
+            <th class="col-xs-2">Driver Details</th>
+            <th class="col-xs-1">Vehicle Name</th>
+            <th class="col-xs-1">Status</th>
+            <th class="col-xs-2">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <%
+            i = 0
+            styleClass = 'success'
+            @drivers.each do |driver|
+              i =i+1
+
+              if i%2 == 0
+                styleClass = 'info'
+              end
+          %>
+              <tr class="info">
+                <td class="col-xs-1"><%= driver.id %></td>
+                <td class="col-xs-1"><%= driver.created_at.strftime("%d-%m-%Y %H:%M") %></td>
+                <td class="col-xs-2"><%= driver.name %><br>
+                  <%= driver.email %><br>
+                  <%= number_to_phone(driver.mobile_no, area_code: true) %>
+                </td>
+                <td class="col-xs-1"> <%= driver.delivery_vehicle.nil? ? '' :  driver.delivery_vehicle.name %></td>
+                <td class="col-xs-1"><%= driver.is_delete == 0 ? 'Active' : 'InActive' %></td>
+                <td class="col-xs-1">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-default">Action</button>
+                    <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="caret"></span>
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="<%= url_for :controller => 'drivers', :action => 'edit', :id => driver.id %>"><i class="fa fa-pencil"></i>&nbsp;
+                        Edit</a></li>
+                      <li><a href="<%= url_for :controller => 'drivers', :action => 'report', :format => 'pdf', :driver_id => driver.id %>" target="_blank"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;
+                        View Report</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+        <div class="pagination-wrapper">
+          <%= will_paginate @approvedDrivers %>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="pending">
+
+      </div>
+    </div>
+
+  </div>
+</section>

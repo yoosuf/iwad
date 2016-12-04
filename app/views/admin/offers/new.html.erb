@@ -1,0 +1,93 @@
+<%= form_for @offer, url: admin_offers_path, :html => {:class => 'form'}  do |f| %>
+    <%= render partial: "/shared/validation_errors", locals: { resource: @offer } %>
+
+    <!-- Main content -->
+<section class="content">
+    <div class="row">
+        <section class="col-lg-12 connectedSortable">
+            <!-- User Stats-->
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs pull-right">
+                    <li class="pull-left header"><i class="fa fa-edit"></i> Add Offer</li>
+                </ul>
+                <br />
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="offrname">Offer Name</label>
+                            <div class=" col-lg-7 col-xs-12">
+                                <%= f.text_field :name, autofocus: true, class:'form-control offername', :required => '', placeholder:'Enter offer name' %>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="offrfrom">Valid From</label>
+                            <div class="col-lg-7 col-xs-12">
+                                <div class='input-group date' id='offrfrom'>
+                                    <%= f.text_field :start_date, autofocus: true, class:'form-control', :required => '',id:'start_date', placeholder:'yyyy/mm/dd', 'data-date-format' => 'yyyy/mm/dd' %>
+                                    <span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+                </div><!-- /.row -->
+                <br />
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="desc">Description</label>
+                            <div class="col-lg-7 col-xs-12">
+                                <%= f.text_area :description, autofocus: true, class:'form-control offerdesc', :required => '' %>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="offrto">Valid To</label>
+                            <div class="col-lg-7 col-xs-12">
+                                <div class='input-group date' id='offrto'>
+                                    <%= f.text_field :end_date, autofocus: true, class:'form-control', id:'end_date', :required => '', placeholder:'yyyy/mm/dd', 'data-date-format' => 'yyyy/mm/dd'%>
+                                    <span class="input-group-addon">
+										    <span class="glyphicon glyphicon-calendar"></span>
+										</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+                </div><!-- /.row -->
+                <br />
+
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="offrstat">Status</label>
+                            <div class=" col-lg-7 col-xs-12">
+                                <%= f.check_box :status %>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+                </div><!-- /.row -->
+
+                <br />
+            </div>
+        </section>
+    </div><!-- /.row -->
+    <div class="row">
+        <div class="col-lg-1">
+            <button id="offrok" type="submit" class="btn btn-primary btn-block">Ok</button>
+        </div>
+    </div>
+    <br />
+</section>
+ <% end %>
+
+<script>
+    $('#start_date').datepicker();
+    $('#end_date').datepicker();
+
+</script>

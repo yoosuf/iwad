@@ -1,0 +1,213 @@
+<!-- Main content -->
+<section class="content content-bg-alt">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3><%= User.count %></h3>
+                    <p>Total Users</p>
+                </div>
+
+                <div class="icon">
+                    <i class="ion-ios-people"></i>
+                </div>
+            </div>
+        </div><!-- ./col -->
+
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-orange">
+                <div class="inner">
+                    <h3><%= Driver.where('status=1 AND is_delete = 0').count %></h3>
+                    <p>Total Drivers</p>
+                </div>
+
+                <div class="icon">
+                    <i class="ion-model-s"></i>
+                </div>
+            </div>
+        </div><!-- ./col -->
+
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3><%= Delivery.where('delivery_status_id <= 5').count %></h3>
+                    <p>Total Deliveries</p>
+                </div>
+
+                <div class="icon">
+                    <i class="ion-android-cart"></i>
+                </div>
+            </div>
+        </div><!-- ./col -->
+
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3>
+                      <%= number_to_currency(Delivery.where('delivery_status_id=5').sum(:cost), unit: "£", separator: ".", delimiter: "") %>
+                    </h3>
+                    <p>Total Income</p>
+                </div>
+
+                <div class="icon">
+                    <i class="ion-cash"></i>
+                </div>
+            </div>
+        </div><!-- ./col -->
+    </div><!-- /.row -->
+    <br />
+
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-6 connectedSortable">
+            <!-- User Stats-->
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs pull-right">
+                    <li class="pull-left header"><i class="fa fa-user"></i> User Statistics</li>
+                </ul>
+
+                <div class="no-padding left-margin font-resize">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>Active Users</h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3><%= User.where('status=1').count %></h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>InActive Users</h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3><%= User.where('status=0').count %></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <!-- Delivery Overview-->
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs pull-right">
+                    <li class="pull-left header"><i class="fa fa-shopping-cart"></i> Delivery Overview</li>
+                </ul>
+
+                <div class="no-padding left-margin font-resize">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>Today</h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3><%= Delivery.where('delivery_status_id=5 AND created_at=?', Date.today.to_s).count %></h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3>This Year</h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3><%= Delivery.where('delivery_status_id=5 AND created_at > ? AND created_at < ?', Date.current.beginning_of_year, Date.current.end_of_year ).count %></h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>This Month</h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3><%= Delivery.where('delivery_status_id=5 AND created_at > ? AND created_at < ?', Date.current.beginning_of_month, Date.current.end_of_month ).count %></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right col -->
+        <section class="col-lg-6 connectedSortable">
+            <!-- Driver Stats-->
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs pull-right">
+                    <li class="pull-left header"><i class="fa fa-users"></i> Driver Statistics</li>
+                </ul>
+
+                <div class="no-padding left-margin font-resize">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h3>Active Drivers</h3>
+                        </div>
+
+                        <div class="col-lg-1">
+                            <h3><%= Driver.where('status=1 AND is_delete = 0').count %></h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h3>Pending Drivers</h3>
+                        </div>
+
+                        <div class="col-lg-1">
+                            <h3><%= Driver.where('status=0').count %></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <!-- Earning Statistics -->
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs pull-right">
+                    <li class="pull-left header"><i class="fa fa-bar-chart"></i> Earning Statistics</li>
+                </ul>
+
+                <div class="no-padding left-margin font-resize">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>Today</h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3>
+                              <%= number_to_currency(Delivery.where('delivery_status_id=5 AND created_at > ? AND created_at < ?', Date.current.beginning_of_day, Date.current.end_of_day).sum(:cost), unit: "£", separator: ".", delimiter: "") %>
+                            </h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3>This Year</h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3>
+                              <%= number_to_currency(Delivery.where('delivery_status_id=5 AND created_at > ? AND created_at < ?', Date.current.beginning_of_year, Date.current.end_of_year ).sum(:cost), unit: "£", separator: ".", delimiter: "") %>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3>This Month</h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <h3>
+                              <%= number_to_currency(Delivery.where('delivery_status_id=5 AND created_at > ? AND created_at < ?', Date.current.beginning_of_month, Date.current.end_of_month ).sum(:cost), unit: "£", separator: ".", delimiter: "") %>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div><!-- /.row -->
+</section>

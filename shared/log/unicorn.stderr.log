@@ -1,0 +1,12 @@
+I, [2016-09-06T15:55:29.817760 #25023]  INFO -- : listening on addr=[::1]:3000 fd=12
+I, [2016-09-06T15:55:29.817964 #25023]  INFO -- : listening on addr=/Users/yoosuf/Projects/rails/iwad-development/iwad/shared/sockets/unicorn.sock fd=13
+I, [2016-09-06T15:55:29.818030 #25023]  INFO -- : worker=0 spawning...
+I, [2016-09-06T15:55:29.819700 #25023]  INFO -- : worker=1 spawning...
+I, [2016-09-06T15:55:29.820296 #25023]  INFO -- : master process ready
+I, [2016-09-06T15:55:29.821045 #25025]  INFO -- : worker=0 spawned pid=25025
+I, [2016-09-06T15:55:29.821538 #25025]  INFO -- : worker=0 ready
+I, [2016-09-06T15:55:29.821532 #25026]  INFO -- : worker=1 spawned pid=25026
+I, [2016-09-06T15:55:29.821860 #25026]  INFO -- : worker=1 ready
+I, [2016-09-06T15:55:46.639425 #25023]  INFO -- : reaped #<Process::Status: pid 25026 exit 0> worker=1
+I, [2016-09-06T15:55:46.639669 #25023]  INFO -- : reaped #<Process::Status: pid 25025 exit 0> worker=0
+I, [2016-09-06T15:55:46.640622 #25023]  INFO -- : master complete

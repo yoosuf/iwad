@@ -1,0 +1,96 @@
+<%= form_for @driver, url: "#{admin_drivers_path}/#{@driver.id}", :html => {:class => 'form'}  do |f| %>
+    <%= render partial: "/shared/validation_errors", locals: { resource: @driver } %>
+
+    <section class="content">
+    <div class="row">
+        <section class="col-lg-12 connectedSortable">
+            <!-- User Stats-->
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs pull-right">
+                    <li class="pull-left header"><i class="fa fa-edit"></i> Edit Diver</li>
+                </ul>
+                <br />
+
+
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12">Driver ID</label>
+
+                            <div class=" col-lg-7 col-xs-12">
+                                <label><%= @driver.id %></label>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12">Registration</label>
+
+                            <div class="col-lg-7 col-xs-12">
+                                <label><%= @driver.created_at.strftime("%d-%m-%Y %H:%M") %></label>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+                </div><!-- /.row -->
+                <br />
+
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12">Driver Name</label>
+
+                            <div class=" col-lg-7 col-xs-12">
+                                <label><%= @driver.first_name + " "+ @driver.surname %></label>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12">Email</label>
+
+                            <div class="col-lg-7 col-xs-12">
+                                <label><%= @driver.email %></label>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+                </div><!-- /.row -->
+                <br />
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12">Vehicle</label>
+
+                            <div class="col-lg-7 col-xs-12">
+                                <label><%= @driver.delivery_vehicle.name %></label>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+                </div><!-- /.row -->
+                <br />
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label col-lg-3 col-xs-12" for="offrstat">Status</label>
+                            <div class=" col-lg-7 col-xs-12">
+                                Disable <%= f.check_box :is_delete %>
+                            </div>
+                        </div>
+                    </div><!-- ./col -->
+                </div><!-- /.row -->
+
+                <br />
+                <div class="row">
+                    <div class="col-lg-1">
+                        <button id="offrok" type="submit" class="btn btn-primary btn-block">Ok</button>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </section>
+    </div><!-- /.row -->
+</section>
+<% end %>

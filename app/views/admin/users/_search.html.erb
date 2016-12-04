@@ -1,0 +1,18 @@
+<div class="col-lg-5">
+  <%= form_tag '/admin/users', method: 'get', class: "sidebar-form" do %>
+      <div class="input-group">
+        <%= select_tag(:option, options_for_select(
+        [ ['ID', 'id'],
+          ['Name', 'name'],
+          ['Email', 'email'],
+          ['Organisation', 'org']
+        ], selected: params[:option]
+        ), class: "form-control", style: 'width: 40%;'
+        ) %>
+        <%= text_field_tag :q, params[:q], placeholder: "Search for a user", class: "form-control", style: 'width: 60%;' %>
+        <div class="input-group-btn">
+        <%= submit_tag "Search", :name => nil, class: "btn btn-flat", id: "search-btn"  %>
+        </div>
+      </div>
+  <% end %>
+</div>

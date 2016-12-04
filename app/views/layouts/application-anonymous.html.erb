@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iWad</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <%= csrf_meta_tags %>
+</head>
+<!-- starting body -->
+<body class="hold-transition">
+
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="#" class="logo logo-bg">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><%= image_tag "logo-mini.png" %></span>
+            <!-- logo for regular state and mobile devices
+            <span class="logo-lg pull-left" media="(max-width: 1920px)"><img src="dist/img/logo-150.png" /></span> -->
+            <!-- logo for mobile devices -->
+            <span class="logo-lg pull-left"><%= image_tag "logo-alt.png" %></span>
+        </a>
+
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top navbar-color" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <span class="main-title">Driver Registration</span>
+        </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="active active-bg">
+                    <a href="<%= new_registration_path(resource_name) %>">
+                        <i class="fa fa-user"></i>
+                        <span>Personal Information</span>
+                    </a>
+                </li>
+                <% if driver_signed_in? %>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-briefcase"></i>
+                        <span>Employment History</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-plus"></i>
+                        <span>Health</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-wheelchair"></i>
+                        <span>Rehabilitation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-check"></i>
+                        <span>Verification</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-car"></i>
+                        <span>Driving License</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-clipboard"></i>
+                        <span>References</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-file"></i>
+                        <span>Supporting Documents</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-file-text"></i>
+                        <span>Declaration & Consent</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span>Equal Opportunities</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-thumbs-up"></i>
+                        <span>Confirmation</span>
+                    </a>
+                </li>
+                    <% end %>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <%
+       classname =''
+        if devise_mapping.registerable? &&  controller_name != 'registrations'
+         classname = 'login-wrapper'
+       end
+    %>
+    <div class="content-wrapper <%= classname %>">
+
+        <%= yield %>
+    </div><!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.3.0
+        </div>
+        <strong>Copyright &copy; 2015 iWAD.</strong> All rights reserved.
+    </footer>
+</div><!-- ./wrapper -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+</body>
+<!-- ending body -->
+</html>

@@ -1,0 +1,258 @@
+
+
+Started GET "/" for ::1 at 2016-09-06 15:55:35 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by DriverController#index as HTML
+Geokit is using the domain: localhost
+Redirected to http://localhost:3000/driver/sign_in
+Filter chain halted as :authenticate_diver! rendered or redirected
+Completed 302 Found in 48ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/driver/sign_in" for ::1 at 2016-09-06 15:55:36 +0530
+Processing by Drivers::SessionsController#new as HTML
+Geokit is using the domain: localhost
+  Rendered drivers/sessions/new.html.erb within layouts/application-anonymous (2076.9ms)
+Completed 200 OK in 3390ms (Views: 3282.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/AdminLTE.min.self-9a99eac3fcda117cc379f434b5e43331918d40ae154d2b0b229486026001842f.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/admin/reports.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/bootstrap.self-07d179d2b7327e05ae8ca9f84af2d35badf61601884e96e14c0bc52a82349e02.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/daterangepicker.self-8fdedca72e37185954049e18b246e6fe2e95f9ae6f5814ff28324fb11301381a.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/jquery-confirm.self-6d7da3d8e5eae8b52e45e88af0a0ab8231468d87b98f28bede57d0ccfa760350.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/assets/datepicker3.self-2f6b9e69713028ee0a67367042ad6fd252518d9abf440a2f232fa999e30b3b5b.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/sweetalert2.self-24c36f8597b31849d56770324717344eebbdc91ab6ee66f7925e719e77b3c17d.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/AdminLTE.self-82d4fdd3d8139ae7a8f67e97acf0e0bdc07a6c8ea6fa7faa8db9c1f4cad2463d.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/main.self-452ccb9a89a14e88022c783f3e68686a261f7f7c3c786217da6af8d75bc06682.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/bootstrap.min.self-04ace02906f367183f471ceb1c391c26a80e5246636e97717b0116231697716c.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/admin.self-d2cf080f25a3fc04e4ab43dfa071026bb05bd179b714fe6de4edb7a78d5c317d.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/application.self-cca1f8b460f8cb55bdcfdbde41cf0bdfdb07fa43d63d1e8e3c37b6c2b18e69f9.css?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-09-06 15:55:39 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap-datepicker.self-133bb2f4ebcf925e23755aa241ebaac855832cf82f6a3c6a55f098d62b9740d6.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/moment-timezone-with-data.self-36eda4acf64687ab24a965e5c64167aab544397f814ab37d8474f72815187fa8.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/daterangepicker.self-2ed61e6e0abe27b5d43a8d76a51b67081c837de09c0f122f8fef3b8410b3b4a5.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/moment.self-b7a2bdec92809f14a7075dba5c612258442c682f893cf3ba98327969adc816e8.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/admin/reports.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/ajquery-ui.min.self-8c88a3da3768799e880c12dcdd4bddf3a0c048f797769ad4794d7872c9f00b46.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/admin.self-7c44b34571f9c6f50024ec815db695a00182b9937b48d97c4ac1515ab6b385a0.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/app.min.self-7175e52be5d1868e9c02087f9030953eaadcb4c11b35feb69f48afa29e6b5ce5.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/admin_scripts.self-ed325d1ac1368c003030bcfb51d38d676f0f373d8997f5eb5bfca1aff5b6f0dd.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/bootstrap.min.self-acc6a813b6dc0a695296b4fec3ca7fbc48269ab0b6345aa4c4acb64b80267dad.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/main.self-26ca31e214f50ea114b59a836ee3eabde25932bed8fceecd139744a30452e1ba.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/application.self-2a44ae8d4b2a976fb4ffac8407d30cadeb2d112427b34cf9cffac4694fd75f63.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/sweetalert2.min.self-7936a095e4f53c3d529f4ccf75da22f43d32760c1231b557aa1e3d1eacab6fc4.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/jquery-confirm.self-5146a292a3067cb1bae8e5f1bad3f45d8d4518d586b9e9965d1fa1a9a8f36936.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/logo-mini-178bdb8a5fef4a2ced2385d5d8a373e7a35db6b64a5d8b56d22cc951f3dd057f.png" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/logo-alt-5814e3be3b1a496d614e637c52f91a8526b5c2756acc64c4c03dd00585f9ec40.png" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/logo-150-1219d34afcd6ccbae9375123e04910e4d3d9778904c33beb9afc04ab6b41edc0.png" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+
+
+Started GET "/assets/fonts/Antenna-Bold-9991da94bf77003142e799ab04279d3e780c4c3f61b920f772e883e692ea6314.otf" for ::1 at 2016-09-06 15:55:40 +0530
+Started GET "/assets/fonts/Antenna-Regular-b1659f016aebe6279cc33ad51269c341a5c9e82ee5917f1a7bcd55d84dbf0f10.otf" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/login-bg.png" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/fonts/glyphicons-halflings-regular-a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742.woff" for ::1 at 2016-09-06 15:55:40 +0530
+
+
+Started GET "/assets/fontawesome-webfont-7dacf83f51179de8d7980a513e67ab3a08f2c6272bb5946df8fd77c0d1763b73.woff2" for ::1 at 2016-09-06 15:55:41 +0530
+Exiting

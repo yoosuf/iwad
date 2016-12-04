@@ -1,0 +1,58 @@
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-lg-12">
+      <h4>View Drivers</h4>
+    </div>
+  </div>
+  <br/>
+
+  <div>
+
+    <!-- Tab panes -->
+    <div class="tab-content content-bg">
+
+
+
+
+<div style="height:100%; width:100%;">
+    <div id="map" class="map" style="height: 500px;"></div>
+</div>
+
+
+
+
+
+
+<script>
+
+    handler = Gmaps.build('Google');
+    handler.buildMap({
+                provider: {
+                    disableDefaultUI: false, 
+                    // pass in other Google Maps API options here
+                    center: {lat: 51.5074, lng: 0.1278},
+                    mapTypeControl: false,
+                    streetViewControl: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+                },
+                internal: {
+                    id: 'map'
+                }
+            },
+            function(){
+                markers = handler.addMarkers(<%=raw @hash.to_json %>);
+                handler.bounds.extendWith(markers);
+                handler.fitMapToBounds();
+            }
+    );
+</script>
+
+    
+      
+
+      </div>
+    </div>
+
+</section>

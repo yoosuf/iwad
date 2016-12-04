@@ -1,0 +1,69 @@
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-lg-1">
+            <h4>Offers</h4>
+        </div>
+        <div class="col-lg-4">
+          <%= render "search" %>
+
+        </div>
+    </div>
+    <br />
+    <div class="row content-height">
+        <div class="col-lg-12">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+
+                    <th class="col-xs-1">Offer ID</th>
+                    <th class="col-xs-1">Created On</th>
+                    <th class="col-xs-2">Offer Name</th>
+                    <th class="col-xs-1">Valid From</th>
+                    <th class="col-xs-1">Valid To</th>
+                    <th class="col-xs-2">Description</th>
+                    <th class="col-xs-2">Status</th>
+                    <th class="col-xs-2">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <%
+                   i = 0
+                   styleClass = 'success'
+                   @offers.each do |offer|
+                     i =i+1
+
+                     if i%2 == 0
+                       styleClass = 'info'
+                     end
+                %>
+
+                <tr class="success">
+                    <td class="col-xs-1"><%= offer.id %></td>
+                    <td class="col-xs-2"><%= offer.created_at.strftime("%d-%m-%Y %H:%M") %></td>
+                    <td class="col-xs-2"><%= offer.name %></td>
+                    <td class="col-xs-1"><%= offer.start_date %></td>
+                    <td class="col-xs-1"><%= offer.end_date %></td>
+                    <td class="col-xs-1"><%= offer.description %></td>
+                    <td class="col-xs-2"><%= offer.status== false ? 'InActive' : 'Active' %></td>
+                    <td class="col-xs-2">
+                        <div class="col-xs-6">
+                            <a href="<%= url_for :controller => 'offers', :action => 'edit', :id => offer.id %>"><i class="glyphicon glyphicon-edit"></i>&nbsp;Edit</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <%= link_to 'Delete', admin_offer_path(offer.id),class: 'modified', method: :delete, data: { confirm: 'Are you sure?' } %>
+                        </div>
+                    </td>
+                </tr>
+                <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div><!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-1">
+            <a href="<%= url_for :controller => 'offers', :action => 'new' %>"> <button id="offradd" type="button" class="btn btn-success btn-block">Add</button></a>
+        </div>
+    </div>
+</section>
