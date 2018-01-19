@@ -137,7 +137,6 @@ class Delivery < ActiveRecord::Base
           temp_delivery = self.temp_delivery_vehicle.get_next_larger_vehicle
         end
 
-        puts "================= temp_delivery #{temp_delivery.inspect} ================="
 
         self.temp_delivery_vehicle = temp_delivery
         self.save

@@ -56,7 +56,6 @@ class DriverLocation < ActiveRecord::Base
   end
 
   def self.getNearestDriver(lat, lon)
-    puts  " putl call nearset method #{lat}"
     return DriverLocation.getNearestDriverWithIgnore(lat, lon, [0])
   end
 

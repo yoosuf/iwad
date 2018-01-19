@@ -21,15 +21,11 @@ class DeliveryWorker
     #Delivery.checkDriverAction(args['locationId'], args['deliveryId'])
     delivery_id = args['deliveryId']
 
-    puts  "# okay call check delivery method first time driver id is #{delivery_id} "
     delivery	   = Delivery.find(delivery_id)
-    puts "wow"
     driverLocation = DriverLocation.find(args['locationId'])
 
-    puts  " putl call check delivery later method frist time"
 
     if (driverLocation.driver_status_id == 2)
-      puts  " putl call checkdrier method"
 
       newDriverLocation  = DriverLocation.getNearestDriverWithIgnore(delivery.from_lat, delivery.from_lon, DriverAllocation.notAvailableIdList(delivery_id))
       delivery.inactiveDelivery(driverLocation.driver_id)
@@ -37,11 +33,9 @@ class DeliveryWorker
       if newDriverLocation
         Delivery.newAllocation(newDriverLocation, delivery_id)
       else
-        puts  " putl call same driver method"
         Delivery.allocate_to_driver(delivery_id)
       end
     end
-    puts driverLocation.driver_status_id
   end
 
   def send_cancellation_email(delivery_id)
